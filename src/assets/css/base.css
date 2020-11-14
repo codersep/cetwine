@@ -1,0 +1,6 @@
+@import "./normalize.css";
+
+:root{
+  --color-text:#666;
+  --font-size: 14px;
+}
