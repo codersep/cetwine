@@ -8,20 +8,35 @@ Vue.use(Vuex)
 // 创建对象
 const store = new Vuex.Store({
   state: {
-    status: false  // 侧边栏状态 false为关 ，true为开
+    status: false  ,// 侧边栏状态状态 false为关 ，true为开
+    isnone: 'none',
+    op: 0
   },
   mutations: {
-    // 展开侧边栏方法
-    rightmove(state){
+    // 开启侧边栏
+    sideOpen(state){
       state.status = true
-      console.log(state.status);
+      this.commit('maskOpen')
     },
-    // 关闭侧边栏方法
-    leftmove(state){
+    // 关闭侧边栏
+    sideClose(state){
       state.status = false
-      console.log(state.status);
+      this.commit('maskClose')
+    },
 
+    maskOpen(state){
+      state.isnone = 'block'
+      setTimeout(function(){
+        state.op = 0.5
+      },10)
+    },
+    maskClose(state){
+      state.op = 0
+      setTimeout(function(){
+        state.isnone = 'none'
+      },500)
     }
+
   }
 })
 

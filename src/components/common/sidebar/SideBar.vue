@@ -1,6 +1,5 @@
 <template>
   <div class="side-bar">
-    <side-mask></side-mask>
     <div :class="[{side_body_active: this.$store.state.status},'side-body']" >
       <side-bar-item></side-bar-item>
     </div>
@@ -8,12 +7,11 @@
 </template>
 
 <script>
-import SideMask from '@/components/common/sidebar/SideMask'
 import SideBarItem from '@/components/common/sidebar/SideBarItem'
+import CetMask from '@/components/common/cetmask/CetMask.vue'
 export default {
   components: {
-    SideMask,
-    SideBarItem
+    SideBarItem,
   },
   data() {
     return {
@@ -33,16 +31,16 @@ export default {
 .side-body {
   z-index: 10;
   height: 100vh;
-  width: 70vw;
+  width: 71vw;
   background-color: rgb(177, 177, 177);
   position: fixed;
-  left: -70vw;
+  left: -71vw;
   transition: 0.4s;
 
 
 }
 .side_body_active{
-  transform: translateX(70vw);
+  transform: translateX(71vw);
 }
 
 

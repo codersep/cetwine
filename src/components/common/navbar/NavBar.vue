@@ -15,7 +15,7 @@ export default {
   #nav-bar{
     z-index: 1;
     height: 44px;
-    background-color: rgba(250, 194, 204, 0.664);
+    background-color: #7DAEBD;
     box-shadow: 0 3px 5px rgba(204, 169, 169,0.8);
     position: fixed;
     left: 0;

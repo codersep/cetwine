@@ -16,7 +16,7 @@
   #tab-bar {
     z-index: 1;
     display: flex;
-    background-color: rgba(250, 194, 204, 0.664);
+    background-color: #7daebd;
     height: 49px;
     position: fixed;
     left: 0;

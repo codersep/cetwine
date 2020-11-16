@@ -47,13 +47,15 @@
     text-align: center;
     font-size: 15px;
     padding-top: 3px;
+    
   }
 
   .tab-bar-item img {
     height: 20px;
+
   }
 
   .active {
-    color: rgba(255, 20, 145, 0.705);
+    /* color: rgba(255, 20, 145, 0.705); */
   }
 </style>

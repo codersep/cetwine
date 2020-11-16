@@ -15,6 +15,8 @@
 </template>
 
 <script>
+
+
 export default {
   name: "App",
   components: {},
@@ -26,9 +28,7 @@ export default {
   methods: {
     iconclick() {
       if (!this.$store.state.status) {
-        this.$store.commit("rightmove");
-      } else {
-        this.$store.commit("leftmove");
+        this.$store.commit("sideOpen");
       }
     },
   }
@@ -57,7 +57,7 @@ export default {
 #nav-bar-cont .icon {
   border-radius: 50%;
   height: 30px;
-  box-shadow: 0 3px 5px rgba(158, 132, 132, 0.8);
+  box-shadow: 0 3px 5px rgba(118, 118, 118, 0.8);
 }
 #nav-bar-cont .set {
   height: 23px;
