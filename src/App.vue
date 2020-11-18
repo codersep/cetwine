@@ -20,7 +20,7 @@ export default {
     MainTabBar,
     MainNavBar,
     SideBar,
-    CetMask
+    CetMask,
   },
 };
 

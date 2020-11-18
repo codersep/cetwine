@@ -4,3 +4,18 @@
   --color-text:#666;
   --font-size: 14px;
 }
+body{
+  padding: 0;
+  margin: 0;
+}
+
+ul,p,div,h1,input,label{
+  padding: 0;
+  margin: 0;
+}
+li{
+  list-style-type: none;
+}
+input{
+  outline: none;
+}

@@ -1,11 +1,13 @@
 import VueRouter from 'vue-router'
 import Vue from "vue"
+import LoginBody from "../views/login/LoginBody";
 // import Home from '@/views/home/Home'
 // import Dict from '@/views/dict/Dict'
 // import About from '@/views/about/About'
 const Home = () => import('../views/home/Home.vue')  //懒加载
 const About = () => import('../views/about/About.vue')
 const Dict = () => import('../views/dict/Dict.vue')
+const Login = () => import('../views/login/Login')
 
 Vue.use(VueRouter)  // 安装路由
 
@@ -24,7 +26,12 @@ VueRouter.prototype.push = function push(location) {
 const routes = [
   {
     path:'',
-    redirect: '/home'
+    redirect: '/login'
+  },
+  {
+    path: '/login',
+    component: Login,
+
   },
   {
     path: '/home',

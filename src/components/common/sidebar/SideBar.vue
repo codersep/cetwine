@@ -34,13 +34,14 @@ export default {
   width: 71vw;
   background-color: rgb(177, 177, 177);
   position: fixed;
-  left: -71vw;
+  left: -75vw;
   transition: 0.4s;
+  box-shadow: 5px 0 5px rgba(61, 61, 61, 0.99);
 
 
 }
 .side_body_active{
-  transform: translateX(71vw);
+  transform: translateX(75vw);
 }
 
 
