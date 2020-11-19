@@ -14,7 +14,6 @@
 
 <style>
   #tab-bar {
-    z-index: 1;
     display: flex;
     background-color: #7daebd;
     height: 49px;

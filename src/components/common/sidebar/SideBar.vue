@@ -7,18 +7,15 @@
 </template>
 
 <script>
-import SideBarItem from '@/components/common/sidebar/SideBarItem'
-import CetMask from '@/components/common/cetmask/CetMask.vue'
+import SideBarItem from "./SideBarItem";
+
 export default {
   components: {
     SideBarItem,
   },
-  data() {
-    return {
-    }
-  },
 
-};
+
+}
 
 </script>
 

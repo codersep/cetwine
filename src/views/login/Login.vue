@@ -7,9 +7,12 @@
 <script>
   import LoginBody from "./LoginBody";
     export default {
-        name: "login",
+      name: "login",
       components:{
         LoginBody
+      },
+      methods: {
+
       }
     }
 </script>

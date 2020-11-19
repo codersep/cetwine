@@ -25,7 +25,10 @@
 </template>
 
 <script>
+  import {login} from "../../network/login";
+
   export default {
+
     name: "LoginBody",
     data() {
       return {
@@ -65,7 +68,15 @@
         }
       },
       login_click(){
-        alert('登录')
+
+         let username = this.cet_name
+         let userpwd = this.cet_pwd
+
+        const a = login(username,userpwd)
+        console.log(a);
+        console.log(this.cet_name);
+        console.log(typeof(this.cet_name))
+        // alert('登录')
       },
       logon_click(){
         alert('注册')

@@ -13,7 +13,6 @@ export default {
 
 <style>
   #nav-bar{
-    z-index: 2;
     height: 44px;
     background-color: #7DAEBD;
     box-shadow: 0 3px 5px rgba(106, 105, 105, 0.99);

@@ -10,9 +10,13 @@ const store = new Vuex.Store({
   state: {
     status: false  ,// 侧边栏状态状态 false为关 ，true为开
     isnone: 'none',
-    op: 0
+    op: 0,
+
   },
+
+
   mutations: {
+    
     // 开启侧边栏
     sideOpen(state){
       state.status = true
@@ -23,13 +27,14 @@ const store = new Vuex.Store({
       state.status = false
       this.commit('maskClose')
     },
-
+    // 弹出遮罩层
     maskOpen(state){
       state.isnone = 'block'
       setTimeout(function(){
         state.op = 0.5
       },10)
     },
+    // 关闭遮罩层
     maskClose(state){
       state.op = 0
       setTimeout(function(){
