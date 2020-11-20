@@ -6,7 +6,7 @@ export  function request(config) {
   // 1. 创建axios实例
     const instance = axios.create({
 
-      baseURL:'http://47.111.81.205/',
+      baseURL:'http://api.isake.top/',
       timeout: 5000
     })
   //  发送网络请求

@@ -49,9 +49,7 @@ export default {
     font-size: 23px;
     color: var(--color-text);
   }
-  .side-bar-item .side-bar-list{
 
-  }
   .side-bar-item .side-bar-list li{
     height: 50px;
     width: 100%;

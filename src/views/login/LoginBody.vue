@@ -14,7 +14,7 @@
       <input type="password" id="userpwd" v-model="cet_pwd" @blur="pwd_is_null" @input="valueChange">
     </div>
 
-    <span class="name-err">{{message}}</span>
+    <span class="name-err">{{$store.state.login_msg}}</span>
 
     <div class="cet-btn">
       <div @click="flag && login_click()" :class="{btnActive:flag}">登录</div>
@@ -34,48 +34,45 @@
       return {
         cet_pwd: '',
         cet_name: '',
-        message: '',
         flag: false
       }
     },
     methods: {
       valueChange(){
         if(!/^[a-zA-Z0-9]{6,12}$/.test(this.cet_name)){
-          this.message = '账号需为6-12位数字或字母'
+          this.$store.state.login_msg = '账号需为6-12位数字或字母'
           this.flag = false
         }
         else {
           if(!/^[a-zA-Z0-9]{6,12}$/.test(this.cet_pwd)){
-            this.message = '密码需为6-12位数字或字母'
+            this.$store.state.login_msg = '密码需为6-12位数字或字母'
             this.flag = false
           }else {
-            this.message = ''
+            this.$store.state.login_msg = ''
             this.flag = true
           }
         }
       },
       name_is_null(){
         if(this.cet_name === ''){
-          this.message = '账号不能为空'
+          this.$store.state.login_msg = '账号不能为空'
           this.flag = false
         }
       },
       pwd_is_null(){
 
         if(this.cet_pwd === ''){
-          this.message = '密码不能为空'
+          this.$store.state.login_msg = '密码不能为空'
           this.flag = false
         }
       },
       login_click(){
 
-         let username = this.cet_name
-         let userpwd = this.cet_pwd
+        let username = this.cet_name
+        let userpwd = this.cet_pwd
 
-        const a = login(username,userpwd)
-        console.log(a);
-        console.log(this.cet_name);
-        console.log(typeof(this.cet_name))
+        login(username,userpwd)
+
         // alert('登录')
       },
       logon_click(){
