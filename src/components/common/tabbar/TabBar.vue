@@ -1,6 +1,6 @@
 <template>
 
-  <div id="tab-bar">
+  <div id="tab-bar" v-show="$store.state.is_login">
     <slot></slot>
   </div>
 </template>
@@ -14,6 +14,7 @@
 
 <style>
   #tab-bar {
+    z-index: 2;
     display: flex;
     background-color: #7daebd;
     height: 49px;

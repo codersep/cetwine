@@ -10,12 +10,16 @@ const store = new Vuex.Store({
     status: false  ,// 侧边栏状态状态 false为关 ，true为开
     isnone: 'none', //控制遮罩层隐藏和显示
     op: 0,  //控制遮罩层的透明过渡效果
+    msg_color:'#ff4444',
+    is_login:false, //是否为登录状态
 
     login_msg:'',
     login_day:0,
-    user_name:'',
-    user_plan:0,
+    user_name: '',
+    user_today_plan: 0,
+    user_total_plan: 0,
     user_goals:0,
+    word_amount: 0,
     token:''
 
   },
@@ -45,7 +49,9 @@ const store = new Vuex.Store({
       setTimeout(function(){
         state.isnone = 'none'
       },500)
-    }
+    },
+
+
 
   }
 })

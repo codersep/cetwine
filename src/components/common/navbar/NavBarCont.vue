@@ -36,10 +36,13 @@ export default {
 </script>
 
 <style>
+
 #nav-bar-cont {
   height: 44px;
   display: flex;
   justify-content: space-between;
+
+
 }
 #nav-bar-cont div {
   height: 100%;
@@ -48,11 +51,15 @@ export default {
   align-items: center;
   justify-content: center;
   color: var(--color-text);
+  margin-top: 5px;
 }
 #nav-bar-cont .nav-set,
 .nav-icon {
   height: 100%;
   width: 50px;
+}
+#nav-bar-cont .nav-title{
+  margin-top: 2px;
 }
 #nav-bar-cont .icon {
   border-radius: 50%;

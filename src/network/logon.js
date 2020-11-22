@@ -1,35 +1,31 @@
 import {request} from "./request";
 import store from '../store'  //引用vuex的属性
-import router from "../router";
+import {login} from "./login";
 
-export function login(username,userpwd){
+export function logon(username,userpwd){
   request(
     {
-      url: '/login',
+      url: '/logon',
       method:'post',
       params: {
         'username':username,
         'userpwd':userpwd
       }
-    })
-    .then(function (res) {
+    }
+  ).then(function (res) {
 
     let load_data = res.data
-
-    if (load_data.code == 200){
-
-
-      sessionStorage.setItem('username',load_data.username)
-      sessionStorage.setItem('isLogin',true)
+    console.log(load_data);
+    if(load_data.code == 201){
 
       store.state.msg_color = 'green'
       store.state.login_msg = load_data.message
-
-      setTimeout(function () {
-        router.replace('/home')
-        store.state.login_msg = ''
-      },500)
-
+      setTimeout(
+        function () {
+          login(username,userpwd) //注册后延迟1秒自动登录
+        },500)
+    }else {
+      store.state.login_msg = load_data.message
     }
 
   }).catch(function (err) {

@@ -14,7 +14,7 @@
       <input type="password" id="userpwd" v-model="cet_pwd" @blur="pwd_is_null" @input="valueChange">
     </div>
 
-    <span class="name-err">{{$store.state.login_msg}}</span>
+    <span class="usermsg" :style={color:$store.state.msg_color}>{{$store.state.login_msg}}</span>
 
     <div class="cet-btn">
       <div @click="flag && login_click()" :class="{btnActive:flag}">登录</div>
@@ -25,7 +25,8 @@
 </template>
 
 <script>
-  import {login} from "../../network/login";
+  import {login} from "../../network/login"
+  import {logon} from "../../network/logon"
 
   export default {
 
@@ -68,15 +69,11 @@
       },
       login_click(){
 
-        let username = this.cet_name
-        let userpwd = this.cet_pwd
+        login(this.cet_name,this.cet_pwd)
 
-        login(username,userpwd)
-
-        // alert('登录')
       },
       logon_click(){
-        alert('注册')
+        logon(this.cet_name,this.cet_pwd)
       }
     }
   }
@@ -85,10 +82,15 @@
 <style>
   .cet-login-body{
     width: 60vw;
-    margin: 90px auto 0;
+    height: 50vh;
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 1px 1px 5px #404040;
-    padding: 20px 10px;
+    padding-top: 3vh;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+
   }
  .cet-login-body .cet-title{
     color: var(--color-text);
@@ -96,12 +98,12 @@
     font-weight: normal;
     width: 100%;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 4vh;
   }
 .cet-login-body .cet-icon{
     width: 35%;
     border-radius: 50%;
-    margin: 0 auto 10px;
+    margin: 0 auto 3%;
     display: block;
     box-shadow: 1px 2px 5px #404040;
 
@@ -126,8 +128,6 @@
     height: 20px;
     font-size: 12px;
     line-height: 20px;
-    color: #ff4444;
-    margin-bottom: 10px;
   }
  .cet-login-body label{
     color: #666;
@@ -140,17 +140,19 @@
     height: 30px;
     display: flex;
     justify-content: space-around;
-    padding-top: 10px;
+    position: absolute;
+    bottom: 4vh;
   }
   .cet-login-body .cet-btn div{
     height: 100%;
-    width: 60px;
+    width: 30%;
     background-color: rgba(125, 125, 125, 0.8);
     text-align: center;
     line-height: 30px;
     border-radius: 5px;
     border: #8d8d8d solid 1px;
     color: #666666;
+
 
   }
   .cet-login-body .cet-btn .btnActive{

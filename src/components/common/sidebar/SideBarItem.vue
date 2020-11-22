@@ -1,7 +1,7 @@
 <template>
   <div class="side-bar-item">
     <img src="../../../assets/img/navbar/sq_icon.jpeg" alt="">
-    <p class="username">username</p>
+    <p class="username">{{$store.state.user_name}}</p>
     <ul class="side-bar-list">
       <li>历史</li>
       <li>档案</li>
