@@ -40,7 +40,11 @@ const routes = [
   },
   {
     path: '/dict',
-    component: Dict
+    component: Dict,
+    beforeEnter: (to, from, next) => {
+
+      next()
+    }
   },
   {
     path: '/about',
@@ -57,10 +61,21 @@ const router = new VueRouter({
 })
 
 import store from "../store";
+import {home} from "../network/home";
+import {get_word_simple} from "../network/word_simple";
 
 router.beforeEach((to, from, next) => {
   store.state.is_login = sessionStorage.getItem('isLogin')
   store.state.user_name = sessionStorage.getItem('username')
+
+  home(store.state.user_name)
+
+  store.state.login_day = sessionStorage.getItem('login_day')
+  store.state.user_total_plan = sessionStorage.getItem('total_plan')
+  store.state.user_today_plan = sessionStorage.getItem('today_plan')
+  store.state.word_amount = sessionStorage.getItem('word_amount')
+  store.state.user_goals = sessionStorage.getItem('user_goals')
+
 
   if (to.path === '/login') {
     if (store.state.is_login){

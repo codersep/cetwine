@@ -23,7 +23,6 @@
   },
 
   created() {
-    home(this.$store.state.user_name)
   },
 
 
@@ -40,7 +39,7 @@
   display: flex;
   align-content: center;
   justify-content: center;
-  background-image: url(../../assets/img/home/home_bg.jpg);
+  background-image: url(../../assets/img/common/cetwine_bg.jpg);
   background-size: cover;
 }
  .home-body{
@@ -69,6 +68,7 @@
   color: #666666;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
 
 }
 .home-body .cet-menu div{

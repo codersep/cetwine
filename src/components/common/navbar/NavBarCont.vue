@@ -46,7 +46,7 @@ export default {
 }
 #nav-bar-cont div {
   height: 100%;
-  font-size: 28px;
+  font-size: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,14 +59,15 @@ export default {
   width: 50px;
 }
 #nav-bar-cont .nav-title{
-  margin-top: 2px;
+  margin-top: 3px;
 }
 #nav-bar-cont .icon {
   border-radius: 50%;
-  height: 30px;
-  box-shadow: 0 3px 5px rgba(118, 118, 118, 0.8);
+  height: 4vh;
+  box-shadow: 0 3px 5px rgba(7, 7, 7, 0.5);
 }
 #nav-bar-cont .set {
-  height: 23px;
+  font-size: 28px;
+  color: #4c4c4c;
 }
 </style>

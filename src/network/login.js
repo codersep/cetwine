@@ -30,6 +30,9 @@ export function login(username,userpwd){
         store.state.login_msg = ''
       },500)
 
+    }else {
+      store.state.msg_color = '#ff4444'
+      store.state.login_msg = load_data.message
     }
 
   }).catch(function (err) {

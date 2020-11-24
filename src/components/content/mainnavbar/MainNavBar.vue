@@ -4,7 +4,7 @@
     <nav-bar-cont>
       <img class="icon" slot="nav-bar-icon" src="@/assets/img/navbar/sq_icon.jpeg" alt="">
       <div class="title" slot="nav-bar-title">CetWine</div>
-      <img class="set" slot="nav-bar-set" src="@/assets/img/navbar/set.svg" alt="">
+      <i slot="nav-bar-set" class="iconfont icontask set"></i>
     </nav-bar-cont>
   </nav-bar>
 </div>

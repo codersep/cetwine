@@ -2,32 +2,21 @@
   <div id="main-tab-bar">
     <tab-bar>
       <tab-bar-item path="/home">
-        <img slot="item-icon" src="@/assets/img/tabbar/home.svg" alt="" />
-        <img
-          slot="item-icon-active"
-          src="@/assets/img/tabbar/home_active.svg"
-          alt=""
-        />
+        <i slot="item-icon" class="iconfont iconhome"></i>
+        <i slot="item-icon-active" class="iconfont iconhomefill"></i>
+
         <div slot="item-text">首页</div>
       </tab-bar-item>
 
       <tab-bar-item path="/dict">
-        <img slot="item-icon" src="@/assets/img/tabbar/dict.svg" alt="" />
-        <img
-          slot="item-icon-active"
-          src="@/assets/img/tabbar/dict_active.svg"
-          alt=""
-        />
+        <i slot="item-icon" class="iconfont iconform_light"></i>
+        <i slot="item-icon-active" class="iconfont iconform_fill_light"></i>
         <div slot="item-text">单词</div>
       </tab-bar-item>
 
       <tab-bar-item path="/about">
-        <img slot="item-icon" src="@/assets/img/tabbar/about.svg" alt="" />
-        <img
-          slot="item-icon-active"
-          src="@/assets/img/tabbar/about_active.svg"
-          alt=""
-        />
+        <i slot="item-icon" class="iconfont iconnewshot"></i>
+        <i slot="item-icon-active" class="iconfont iconnewshotfill"></i>
         <div slot="item-text">关于</div>
       </tab-bar-item>
     </tab-bar>

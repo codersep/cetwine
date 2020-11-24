@@ -45,14 +45,14 @@
   .tab-bar-item {
     flex: 1;
     text-align: center;
-    font-size: 15px;
     padding-top: 3px;
-    
+    color: #474747;
   }
-
-  .tab-bar-item img {
-    height: 20px;
-
+  .tab-bar-item div {
+    font-size: 15px;
+  }
+  .tab-bar-item i{
+    font-size: 20px;
   }
 
   .active {

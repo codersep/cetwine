@@ -13,6 +13,7 @@ const store = new Vuex.Store({
     msg_color:'#ff4444',
     is_login:false, //是否为登录状态
 
+    word_data:'',
     login_msg:'',
     login_day:0,
     user_name: '',

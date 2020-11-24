@@ -4,7 +4,7 @@
     <p class="username">{{$store.state.user_name}}</p>
     <ul class="side-bar-list">
       <li>历史</li>
-      <li>档案</li>
+      <li>设置</li>
       <li>关于</li>
       <li>退出</li>
     </ul>
