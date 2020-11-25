@@ -68,7 +68,6 @@ router.beforeEach((to, from, next) => {
   store.state.is_login = sessionStorage.getItem('isLogin')
   store.state.user_name = sessionStorage.getItem('username')
 
-  home(store.state.user_name)
 
   store.state.login_day = sessionStorage.getItem('login_day')
   store.state.user_total_plan = sessionStorage.getItem('total_plan')

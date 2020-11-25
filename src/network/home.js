@@ -10,6 +10,7 @@ export function home(username) {
   })
     .then(function (res) {
       let load_data = res.data
+      
       sessionStorage.setItem('login_day',load_data.login_day)
       sessionStorage.setItem('today_plan',load_data.today_plan)
       sessionStorage.setItem('total_plan',load_data.total_plan)

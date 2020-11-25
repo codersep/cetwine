@@ -7,9 +7,14 @@
         <div class="phonetic-uk">{{phonetic_uk}}</div>
         <div class="phonetic-us">{{phonetic_us}}</div>
       </div>
-      <div v-for="(item,i) in translate" class="dict-translate">{{item}}</div>
+
+      <div class="dict-translate" v-for="(item,i) in translate">{{item}}</div>
+
       <div class="dict-distortion">{{distortion}}</div>
-      <div class=""></div>
+      <div class="dict-btn">
+        <button>上一个</button>
+        <button>下一个</button>
+      </div>
     </div>
   </div>
 

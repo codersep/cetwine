@@ -23,6 +23,8 @@
   },
 
   created() {
+    home(store.state.user_name)
+
   },
 
 
